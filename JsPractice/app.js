@@ -168,15 +168,43 @@
 // console.log(node.value)
 
 
-function hello(str){
-    console.log(str + " "+this.name)
+// function hello(str){
+//     console.log(str + " "+this.name)
+// }
+
+// const user = {
+//     name: "Umair",
+//     age: 24
+// }
+// console.log(hello.call(user, "Hello"));
+
+
+let arr = [1, 2, 3, 6,6,6, 5, 4];
+
+
+function hello(numArr){
+    const unqueNumbers = [... new Set(numArr)];
+    console.log(unqueNumbers)
+    let index = 0
+    let arrLeftSide = []
+    for(let i = 0; i < unqueNumbers.length; i++){
+       for(let j = i; j < unqueNumbers.length - 1; j++){
+          if(unqueNumbers[i] > unqueNumbers[j]){
+              console.log(unqueNumbers[i], i)
+              index = i
+          }
+       }
+
+    }
+
+    for(let i = index; i < unqueNumbers.length; i++){
+        arrLeftSide.push(unqueNumbers[i])
+    }
+
+    console.log("Unique",arrLeftSide)
 }
 
-const user = {
-    name: "Umair",
-    age: 24
-}
-console.log(hello.call(user, "Hello"))
+hello(arr)
 
 
 
