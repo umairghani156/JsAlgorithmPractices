@@ -179,32 +179,41 @@
 // console.log(hello.call(user, "Hello"));
 
 
-let arr = [1, 2, 3, 6,6,6, 5, 4];
+// let arr = [1, 2, 3, 6,6,6, 5, 4];
 
 
-function hello(numArr){
-    const unqueNumbers = [... new Set(numArr)];
-    console.log(unqueNumbers)
-    let index = 0
-    let arrLeftSide = []
-    for(let i = 0; i < unqueNumbers.length; i++){
-       for(let j = i; j < unqueNumbers.length - 1; j++){
-          if(unqueNumbers[i] > unqueNumbers[j]){
-              console.log(unqueNumbers[i], i)
-              index = i
-          }
-       }
+// function hello(numArr){
+//     const unqueNumbers = [... new Set(numArr)];
+//     console.log(unqueNumbers)
+//     let index = 0
+//     let arrLeftSide = []
+//     for(let i = 0; i < unqueNumbers.length; i++){
+//        for(let j = i; j < unqueNumbers.length - 1; j++){
+//           if(unqueNumbers[i] > unqueNumbers[j]){
+//               console.log(unqueNumbers[i], i)
+//               index = i
+//           }
+//        }
 
-    }
+//     }
 
-    for(let i = index; i < unqueNumbers.length; i++){
-        arrLeftSide.push(unqueNumbers[i])
-    }
+//     for(let i = index; i < unqueNumbers.length; i++){
+//         arrLeftSide.push(unqueNumbers[i])
+//     }
 
-    console.log("Unique",arrLeftSide)
-}
+//     console.log("Unique",arrLeftSide)
+// }
 
-hello(arr)
+// hello(arr)
+
+
+const fruits = ["apple", "banana", "apple", "orange", "banana", "apple"];
+const count = fruits.reduce((acc, fruit) => {
+  acc[fruit] = (acc[fruit] || 0) + 1;
+  return acc;
+}, {});
+console.log(count); 
+
 
 
 
