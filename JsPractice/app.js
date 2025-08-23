@@ -213,6 +213,8 @@ const count = fruits.reduce((acc, fruit) => {
   return acc;
 }, {});
 console.log(count); 
+let arr = ["Umair","Akmal","Mehmood"]
+
 
 
 
