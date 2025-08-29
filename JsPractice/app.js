@@ -1,4 +1,15 @@
+let state = {
+  count: 0
+};
 
+function stateUpdater(){
+  return state = {
+    ...state,
+    count: state.count + 1
+  }
+}
+
+console.log(stateUpdater)
 
 // function debounceTimer(fn, delay){
 //     let timer;
